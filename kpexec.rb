@@ -9,17 +9,21 @@ class Kpexec < Formula
   license "MIT"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/ssup2/kpexec/releases/download/v0.2.0/kpexec_0.2.0_Darwin_x86_64.tar.gz"
-    sha256 "a36ad5d26c36f6b4bad62ac03ff56db6a14a1e6290de43974e137acf82050986"
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/ssup2/kpexec/releases/download/v0.2.0/kpexec_0.2.0_Darwin_amd64.tar.gz"
+    sha256 "46a6374ebceba7555b38e02e690948dff18371c9464b68ea0dd83e03ecd6947d"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/ssup2/kpexec/releases/download/v0.2.0/kpexec_0.2.0_Darwin_arm64.tar.gz"
+    sha256 "de5641a773f6c804aeea03ccc7728968606bf32e2a4401943f6ced7a6e751acf"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ssup2/kpexec/releases/download/v0.2.0/kpexec_0.2.0_Linux_x86_64.tar.gz"
-    sha256 "4fca99e2e329d86130da04c894694dfccc5803adfc30f7be899159eed1fa2c2f"
+    url "https://github.com/ssup2/kpexec/releases/download/v0.2.0/kpexec_0.2.0_Linux_amd64.tar.gz"
+    sha256 "7063cf045502b762be9b8e77f241c3cd15552f47e36084b409b74700480f2e47"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/ssup2/kpexec/releases/download/v0.2.0/kpexec_0.2.0_Linux_arm64.tar.gz"
-    sha256 "8db1ab21fbfc9557281d6bed1ba380e432feb14967c4fed7f3a3840458b06de5"
+    sha256 "65064e61d3ecd7364e63a66800780953f9ba2fd4d6a18c84268a8756728115fc"
   end
 
   def install
