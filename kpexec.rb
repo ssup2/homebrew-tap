@@ -5,25 +5,25 @@
 class Kpexec < Formula
   desc "Execute a commad in a running container with privilege"
   homepage "https://github.com/ssup2/kpexec"
-  version "0.2.3"
+  version "0.2.4"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/ssup2/kpexec/releases/download/v0.2.3/kpexec_0.2.3_Darwin_amd64.tar.gz"
-    sha256 "d01244c0cc2e94e9a13e2d4ce4fa3aee7406d720b71060f316504ae52a592395"
+    url "https://github.com/ssup2/kpexec/releases/download/v0.2.4/kpexec_0.2.4_Darwin_amd64.tar.gz"
+    sha256 "7e20a3817db9bf45c140c7d112fefc50798df1389ba906fd4c7036e7af4fbc8b"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/ssup2/kpexec/releases/download/v0.2.3/kpexec_0.2.3_Darwin_arm64.tar.gz"
-    sha256 "45b474b366f6c3cf876d2271df02c31ccca7d74df7de97f28189892f69fbb8df"
+    url "https://github.com/ssup2/kpexec/releases/download/v0.2.4/kpexec_0.2.4_Darwin_arm64.tar.gz"
+    sha256 "6708dd9c6b75d18b28a6a8487018ca315cf5b319e5252dfeb1d034099e576a18"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ssup2/kpexec/releases/download/v0.2.3/kpexec_0.2.3_Linux_amd64.tar.gz"
-    sha256 "dd5d0ef006d4fdd0d5144e09de4d1c21c6eaef109748903a9520f8a057cf7631"
+    url "https://github.com/ssup2/kpexec/releases/download/v0.2.4/kpexec_0.2.4_Linux_amd64.tar.gz"
+    sha256 "11d2c16086464c101da7890c721f143f8a0a59b366496fd6ad554b825873debf"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/ssup2/kpexec/releases/download/v0.2.3/kpexec_0.2.3_Linux_arm64.tar.gz"
-    sha256 "6b2f5d86ba5ec431f22b8d306203b71b5811c416c777d74b2c8950ba599c1b10"
+    url "https://github.com/ssup2/kpexec/releases/download/v0.2.4/kpexec_0.2.4_Linux_arm64.tar.gz"
+    sha256 "19e6748d94351641115e4ae2d9e3c93db71cc7a970ede8096a4872cff1d183dc"
   end
 
   def install
