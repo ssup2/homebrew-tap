@@ -11,19 +11,19 @@ class Kpexec < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/ssup2/kpexec/releases/download/v0.2.6/kpexec_0.2.6_Darwin_amd64.tar.gz"
-    sha256 "9e2c0a262c1a8e4bf285ce1996968ad54d40d1bee15db5db22a9cde480082319"
+    sha256 "0f1f29fce455e219d32475ad4c9bcfd8762da908936f8d67187792649dc6c23c"
   end
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/ssup2/kpexec/releases/download/v0.2.6/kpexec_0.2.6_Darwin_arm64.tar.gz"
-    sha256 "7a346d6dbeb33ea681f7c9e70863cc1e45eb8f54e095696e19d47aa0638bccae"
+    sha256 "4d1a237c47324230f2ff2be06999409fd81b6163d2bcd1f2d8d846219884a329"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/ssup2/kpexec/releases/download/v0.2.6/kpexec_0.2.6_Linux_amd64.tar.gz"
-    sha256 "5c18d6f76ef7f17b15aceac385e811a1abb6fcd073c7445b6004e108341e7eff"
+    sha256 "4884b7aa67a2c7c8e11e785efd63db0720b1b508cfb76466a4923aef6eeb34be"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/ssup2/kpexec/releases/download/v0.2.6/kpexec_0.2.6_Linux_arm64.tar.gz"
-    sha256 "2e5f13f7df1e01380fb0bbdc50d397cd79de9072797f7d57d1b59d2b493094c3"
+    sha256 "465108d7ad5c9684b125c24d51f01deb165b6c0c01614250c4b44a6c877d6a6b"
   end
 
   def install
