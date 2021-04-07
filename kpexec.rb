@@ -5,24 +5,24 @@
 class Kpexec < Formula
   desc ""
   homepage ""
-  version "0.3.1"
+  version "0.3.2"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/ssup2/kpexec/releases/download/v0.3.1/kpexec_v0.3.1_Darwin_amd64.tar.gz"
-    sha256 "d186b13cb59e1973c96090292b1630bcad4d952f68cc7330b3ec8cb1c10e0afd"
+    url "https://github.com/ssup2/kpexec/releases/download/v0.3.2/kpexec_v0.3.2_Darwin_amd64.tar.gz"
+    sha256 "1b8cf0aca957e15fbdf6397cbec945330c1a733afe416f566622bdb35a0fc48f"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/ssup2/kpexec/releases/download/v0.3.1/kpexec_v0.3.1_Darwin_arm64.tar.gz"
-    sha256 "d5cc82e8091e5460806f6a30288cb79987b070b0b740a5b838561d11b89443e4"
+    url "https://github.com/ssup2/kpexec/releases/download/v0.3.2/kpexec_v0.3.2_Darwin_arm64.tar.gz"
+    sha256 "c0025d7699346483c45a010f229502f853e9f1e3168d9318bd6be9a8ea8aecff"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ssup2/kpexec/releases/download/v0.3.1/kpexec_v0.3.1_Linux_amd64.tar.gz"
-    sha256 "baf942b4afb5a4de1a31737c7d61a089fc61d432e29686a03e786ac00622441c"
+    url "https://github.com/ssup2/kpexec/releases/download/v0.3.2/kpexec_v0.3.2_Linux_amd64.tar.gz"
+    sha256 "9f989e057d859aeb6259ad1af285278e6c78405b7f05a8c39755f6c1b12aba27"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/ssup2/kpexec/releases/download/v0.3.1/kpexec_v0.3.1_Linux_arm64.tar.gz"
-    sha256 "333b4e6257bfbc2ab3dc68774e5fa2445f2ad364b516ffce09641f4e85484c0c"
+    url "https://github.com/ssup2/kpexec/releases/download/v0.3.2/kpexec_v0.3.2_Linux_arm64.tar.gz"
+    sha256 "3d28ca936f44922e8b5d0f9330950364dd979640242779cc95a3ed19c7d9bc2e"
   end
 
   def install
