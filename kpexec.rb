@@ -5,28 +5,28 @@
 class Kpexec < Formula
   desc ""
   homepage ""
-  version "0.3.3"
+  version "0.3.4"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ssup2/kpexec/releases/download/v0.3.3/kpexec_v0.3.3_Darwin_amd64.tar.gz"
-      sha256 "d28f90664a687d641533e527a037ed2e1680832230f3e0d31c0e242bf4ee38bf"
+      url "https://github.com/ssup2/kpexec/releases/download/v0.3.4/kpexec_v0.3.4_Darwin_amd64.tar.gz"
+      sha256 "757a9c4ab7c22d2e1f5aed21a04e4d5535d75fbf74a780afd0a8db1fd648400e"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ssup2/kpexec/releases/download/v0.3.3/kpexec_v0.3.3_Darwin_arm64.tar.gz"
-      sha256 "2b51707321d33627591e7960decd4f2a5836303bfb216595a72a5ab827eb4c49"
+      url "https://github.com/ssup2/kpexec/releases/download/v0.3.4/kpexec_v0.3.4_Darwin_arm64.tar.gz"
+      sha256 "adf994e03202b5912999c9035808b22ad4b5a81049015de6248fc70642ac026a"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/ssup2/kpexec/releases/download/v0.3.3/kpexec_v0.3.3_Linux_amd64.tar.gz"
-      sha256 "89b15566e97ad96cd71681a81baebbb622b69a41273a1bd1ef7f3379b8f1d1f9"
+      url "https://github.com/ssup2/kpexec/releases/download/v0.3.4/kpexec_v0.3.4_Linux_amd64.tar.gz"
+      sha256 "6e534cead998582ab91c66fc4584b262010ccf2c9fff6e8f792d68f44277bea8"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ssup2/kpexec/releases/download/v0.3.3/kpexec_v0.3.3_Linux_arm64.tar.gz"
-      sha256 "e2b3164318a3960972fab0961d86c53de58fee631506c7cc33c23749c9e040af"
+      url "https://github.com/ssup2/kpexec/releases/download/v0.3.4/kpexec_v0.3.4_Linux_arm64.tar.gz"
+      sha256 "7d0a56c251df784d72276e2df1f5c604c5b28e98236a05da85780d5b0a59498c"
     end
   end
 
