@@ -5,43 +5,28 @@
 class Kpexec < Formula
   desc ""
   homepage ""
-  version "0.3.5"
+  version "0.4.0"
+  bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/ssup2/kpexec/releases/download/v0.3.5/kpexec_v0.3.5_Darwin_arm64.tar.gz"
-      sha256 "6e79f16251c1532efab4a8d16d35a9685518cab68a66ba7eacf4370aae8e93d6"
-
-      def install
-        bin.install "kpexec"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/ssup2/kpexec/releases/download/v0.3.5/kpexec_v0.3.5_Darwin_amd64.tar.gz"
-      sha256 "6a412b07bd4671d395c8ba5e5662060d1f1e03d06c1837749045fd5160c42b4e"
-
-      def install
-        bin.install "kpexec"
-      end
+      url "https://github.com/ssup2/kpexec/releases/download/v0.4.0/kpexec_v0.4.0_Darwin_amd64.tar.gz"
+      sha256 "3d4fdb948e260c2c76a45f55b7b0cbd3ca0ca545d3d5d9512f255250a84f2fb8"
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ssup2/kpexec/releases/download/v0.3.5/kpexec_v0.3.5_Linux_arm64.tar.gz"
-      sha256 "12568c848d6d7483ca877815becd1a794203ec47a530f530a06247b89bcd8f1c"
-
-      def install
-        bin.install "kpexec"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/ssup2/kpexec/releases/download/v0.3.5/kpexec_v0.3.5_Linux_amd64.tar.gz"
-      sha256 "e77cc63c2c30c6430718f765630c82420ce502262573d63b26faeec0ae5ffdd2"
-
-      def install
-        bin.install "kpexec"
-      end
+      url "https://github.com/ssup2/kpexec/releases/download/v0.4.0/kpexec_v0.4.0_Linux_amd64.tar.gz"
+      sha256 "9b86b352665e25b4574bc322ceedb3d219d557abc80b472336b2abb4fa3e98fe"
     end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ssup2/kpexec/releases/download/v0.4.0/kpexec_v0.4.0_Linux_arm64.tar.gz"
+      sha256 "5a51b687dfb51d107019210fa3f8e7dceb9a3b143a6b3aabc8893b0ce1c0ec5d"
+    end
+  end
+
+  def install
+    bin.install "kpexec"
   end
 end
