@@ -5,20 +5,20 @@
 class Kpexec < Formula
   desc ""
   homepage ""
-  version "0.4.5"
+  version "0.4.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ssup2/kpexec/releases/download/v0.4.5/kpexec_v0.4.5_darwin_amd64.tar.gz"
-      sha256 "12ad84014b3fefb6b8e64cf13ce5083ba242a58a28a38eb28397654ea77d7d57"
+      url "https://github.com/ssup2/kpexec/releases/download/v0.4.6/kpexec_v0.4.6_darwin_amd64.tar.gz"
+      sha256 "a762ad7fb565bdbbb957301bb68d8408022af471033d682e019c917c40efc860"
 
       def install
         bin.install "kpexec"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ssup2/kpexec/releases/download/v0.4.5/kpexec_v0.4.5_darwin_arm64.tar.gz"
-      sha256 "0744704539fd5e0016acb120ff6f68cd31de3c9e3e8dfd5096299739a1df6921"
+      url "https://github.com/ssup2/kpexec/releases/download/v0.4.6/kpexec_v0.4.6_darwin_arm64.tar.gz"
+      sha256 "9c7454d22ca280bbc4f39b976829405732dd4aaf36de261af40904bf94b5b815"
 
       def install
         bin.install "kpexec"
@@ -28,15 +28,15 @@ class Kpexec < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ssup2/kpexec/releases/download/v0.4.5/kpexec_v0.4.5_linux_amd64.tar.gz"
-      sha256 "9dcf05810dbcc1f807dbfe35fc1e8b40f2a454347ca6f9a13318fa8b69fd84e4"
+      url "https://github.com/ssup2/kpexec/releases/download/v0.4.6/kpexec_v0.4.6_linux_amd64.tar.gz"
+      sha256 "97b3690adf78be92309083456875fce76ce5e46a480431a9b376f75a06a01705"
       def install
         bin.install "kpexec"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ssup2/kpexec/releases/download/v0.4.5/kpexec_v0.4.5_linux_arm64.tar.gz"
-      sha256 "f177962c144c7a6ad89ff7a945564c92187de1a60be3d46c25fe6322b722c2b9"
+      url "https://github.com/ssup2/kpexec/releases/download/v0.4.6/kpexec_v0.4.6_linux_arm64.tar.gz"
+      sha256 "7a114ab5854592f92253b2ad5d25727017673d69d090fbb651c46a9e2eb980ae"
       def install
         bin.install "kpexec"
       end
